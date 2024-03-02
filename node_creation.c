@@ -6,7 +6,7 @@
 /*   By: tsoares- <tsoares-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:37:37 by tsoares-          #+#    #+#             */
-/*   Updated: 2024/03/02 19:19:12 by tsoares-         ###   ########.fr       */
+/*   Updated: 2024/03/02 19:24:20 by tsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	main(void)
 
 	p = (struct node *)malloc(sizeof(struct node)); // allocates memory for node p
 	scanf("%d", p->data); // the user inputs is being attributed to the data of p
-	p->next = NULL;
+	p->next = NULL; // attributes NULL as the value of node p
 	return (0);
 }
