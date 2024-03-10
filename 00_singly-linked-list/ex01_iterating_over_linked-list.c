@@ -14,7 +14,8 @@ typedef struct  node
 
 int main(void)
 {
-    node root;
+    node    root;
+
     root.x = 15;
     root.next = (node *)malloc(sizeof(node));
     if (root.next == NULL)
