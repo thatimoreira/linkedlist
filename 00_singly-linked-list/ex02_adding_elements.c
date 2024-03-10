@@ -16,6 +16,14 @@ void    insert_end(node **root, int value)
         exit (1);
     new_node->x = value;
     new_node->next = NULL;
+
+    node *current;
+    
+    current = *root;
+    while (current->next != NULL) // condição para que o conteúdo do nó atual não seja nulo
+        current = current->next;
+    current->next = new_node;
+    // free???
 }
 
 int main(void)
@@ -23,15 +31,7 @@ int main(void)
     node    root;
 
     root.x = 15;
-    root.next = (node *)malloc(sizeof(node));
-    if (root.next == NULL)
-        return (-1);
-    root.next->x = -2;
-    root.next->next = (node *)malloc(sizeof(node));
-    if (root.next->next == NULL)
-        return (-1);
-    (*root.next).next->x = 22;
-    (*root.next).next->next = NULL;
+    root.next = NULL;
 
     node    *current;
 
@@ -43,7 +43,6 @@ int main(void)
         current = current->next;
     }
     printf("\n");
-    free(root.next->next);
     free(root.next);
     return (0);
 }
