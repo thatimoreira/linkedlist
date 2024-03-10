@@ -19,6 +19,6 @@ int main(void)
     elem2.x = -2;
     elem2.next = NULL;
     printf("First element: %d\n", root.x);
-    printf("Second element: %d\n", root.next->x);
+    printf("Second element: %d\n", (*root.next).x);
     return (0);
 }
