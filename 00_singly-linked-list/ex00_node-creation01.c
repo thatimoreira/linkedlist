@@ -20,5 +20,6 @@ int main(void)
     root.next->next = NULL;
     printf("First element: %d\n", root.x);
     printf("Second element: %d\n", (*root.next).x);
+    free(root.next);
     return (0);
 }
