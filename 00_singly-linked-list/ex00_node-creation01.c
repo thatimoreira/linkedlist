@@ -11,13 +11,13 @@ typedef struct  node
 int main(void)
 {
     // Initializing nodes
-    node    root, elem2;
+    node    root;
 
     // Assigning values and connecting nodes
     root.x = 15;
-    root.next = &elem2;
-    elem2.x = -2;
-    elem2.next = NULL;
+    root.next = (node *)malloc(sizeof(node));
+    root.next->x = -2;
+    root.next->next = NULL;
     printf("First element: %d\n", root.x);
     printf("Second element: %d\n", (*root.next).x);
     return (0);
