@@ -7,6 +7,17 @@ typedef struct  node
     struct node *next;
 } node;
 
+void    insert_end(node **root, int value)
+{
+    node    *new_node;
+
+    new_node = (node *)malloc(sizeof(node));
+    if (new_node == NULL)
+        exit (1);
+    new_node->x = value;
+    new_node->next = NULL;
+}
+
 int main(void)
 {
     node    root;
@@ -22,7 +33,7 @@ int main(void)
     (*root.next).next->x = 22;
     (*root.next).next->next = NULL;
 
-    node *current;
+    node    *current;
 
     current = &root;
     printf("Nodes: ");
