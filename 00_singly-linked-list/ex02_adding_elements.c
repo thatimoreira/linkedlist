@@ -27,14 +27,20 @@ void    insert_end(node **root, int value)
 
 int main(void)
 {
-    node    root;
+    node    *root;
 
-    root.x = 15;
-    root.next = NULL;
+    root = (node *)malloc(sizeof(node));
+    if (root == NULL)
+        exit (1);
+    root->x = 15;
+    root->next = NULL;
+
+    insert_end(&root, -2);
+    insert_end(&root, -11);
 
     node    *current;
 
-    current = &root;
+    current = root;
     printf("Nodes: ");
     while (current != NULL)
     {
@@ -42,6 +48,5 @@ int main(void)
         current = current->next;
     }
     printf("\n");
-    free(root.next);
     return (0);
 }
