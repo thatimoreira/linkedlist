@@ -23,7 +23,6 @@ void    insert_end(node **root, int value)
     while (current->next != NULL) // condição para que o conteúdo do nó atual não seja nulo
         current = current->next;
     current->next = new_node;
-    // free???
 }
 
 int main(void)
