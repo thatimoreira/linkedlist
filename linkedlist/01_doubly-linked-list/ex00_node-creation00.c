@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   node_creation.c                                    :+:      :+:    :+:   */
+/*   ex00_node-creation00.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsoares- <tsoares-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:37:37 by tsoares-          #+#    #+#             */
-/*   Updated: 2024/03/05 03:38:04 by tsoares-         ###   ########.fr       */
+/*   Updated: 2024/04/21 10:09:11 by tsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	main(void)
 		printf("Node %d: ", i);
 		p = (struct node *)malloc(sizeof(struct node)); // allocates memory for node p
 		scanf("%d", &p->data); // the user input is being attributed to the data of p
-		p->next = NULL; // attributes NULL as the value of node p
+		p->next = NULL; // attributes NULL as adress value of p next node
 		if (head == NULL) // if the linked list wasn't created
-			head = p; // makes the 1st node of the linked list and gives the value p to it
+			head = p; // creates the 1st node of the linked list and gives the value p to it
 		else
 			prev->next=p; // connects the previous node to node p (current node)
 		prev = p; // makes the last node

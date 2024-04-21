@@ -20,7 +20,7 @@ void    insert_end(node **root, int value)
     node *current;
     
     current = *root;
-    while (current->next != NULL) // condição para que o conteúdo do nó atual não seja nulo
+    while (current->next != NULL)
         current = current->next;
     current->next = new_node;
 }
