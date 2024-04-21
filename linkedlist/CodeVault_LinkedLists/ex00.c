@@ -6,7 +6,7 @@
 /*   By: tsoares- <tsoares-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 09:38:48 by tsoares-          #+#    #+#             */
-/*   Updated: 2024/04/21 10:23:15 by tsoares-         ###   ########.fr       */
+/*   Updated: 2024/04/21 10:27:13 by tsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(int argc, char **argv)
 		//printf("Second node: %d\n", elem2.x);
 		printf("Second node: %d\n", head.next->x);
 		//printf("Second node: %d\n", (*head.next).x);
+		free (head.next);
 	}
 	else
 		printf("Please, inform node values\n");
